@@ -1,1 +1,1 @@
-export const url = "https://accredian-backend-task-git-main-adarshgupta404.vercel.app"
+export const url = "https://accredian-backend-task-production.up.railway.app"
