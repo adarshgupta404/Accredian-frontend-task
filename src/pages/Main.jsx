@@ -35,6 +35,7 @@ const Main = () => {
   }
   return (
     <>
+      {auth ? (
         <>
           <Box
             display="flex"
@@ -43,7 +44,22 @@ const Main = () => {
             justifyContent="center"
             height="100vh"
           >
-            <Button variant="contained">You are Authenticated!</Button>
+            <Button variant="contained">You are authorized, {name}!</Button>
+            <Button type="submit" variant="contained" onClick={handleDelete} color="secondary">
+              Sign Out
+            </Button>
+          </Box>
+        </>
+      ) : (
+        <>
+          <Box
+            display="flex"
+            gap={"10px"}
+            alignItems="center"
+            justifyContent="center"
+            height="100vh"
+          >
+            <Button variant="contained">{message}</Button>
             <Button type="submit" onClick={()=>{
                 navigate("/")
             }} variant="contained" color="secondary">
@@ -51,7 +67,26 @@ const Main = () => {
             </Button>
           </Box>
         </>
+      )}
     </>
+    // <>
+    //     <>
+    //       <Box
+    //         display="flex"
+    //         gap={"10px"}
+    //         alignItems="center"
+    //         justifyContent="center"
+    //         height="100vh"
+    //       >
+    //         <Button variant="contained">You are Authenticated!</Button>
+    //         <Button type="submit" onClick={()=>{
+    //             navigate("/")
+    //         }} variant="contained" color="secondary">
+    //           Go Back
+    //         </Button>
+    //       </Box>
+    //     </>
+    // </>
   );
 };
 
