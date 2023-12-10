@@ -1,1 +1,1 @@
-export const url = "http://localhost:8000"
+export const url = "https://accredian-backend-task-git-main-adarshgupta404.vercel.app"
