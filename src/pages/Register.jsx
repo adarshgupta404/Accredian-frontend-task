@@ -93,7 +93,8 @@ export default function Register() {
         style={{
           backgroundImage: `url(${""})`,
           backgroundSize: "cover",
-          height: "100vh",
+          height: "100%",
+          overflow: "hidden",
           color: "#f5f5f5",
         }}
       >
