@@ -1,1 +1,1 @@
-export const url = "https://accredian-backend-task-production.up.railway.app"
+export const url = "http://localhost:3000"
