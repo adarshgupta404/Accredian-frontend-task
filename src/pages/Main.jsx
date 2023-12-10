@@ -11,7 +11,7 @@ const Main = () => {
   axios.defaults.withCredentials = true;
   useEffect(() => {
     axios
-      .get(url)
+      .get(url,  { withCredentials: true })
       .then((res) => {
         if (res.data.Status === "Success") {
           setauth(true);
@@ -29,7 +29,7 @@ const Main = () => {
       });
   }, []);
   const handleDelete = ()=>{
-    axios.get(url+'/logout').then(res=>{
+    axios.get(`${url}/logout`,  { withCredentials: true }).then(res=>{
         window.location.reload(true)
     }).catch(err=>console.log(err))
   }
